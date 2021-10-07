@@ -8,13 +8,11 @@ public class test {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int a = Integer.parseInt(reader.readLine());
         int b = Integer.parseInt(reader.readLine());
-        int i;
-        if (a > b) i = a;
-        else  i = b;
-            while (true) {
-                if (b % i == 0 && a % i == 0) break;
-                else i = i - 1;
-            }
-            System.out.println(i);
+        int i = Math.max(a, b);
+        while (true) {
+            if (b % i == 0 && a % i == 0) break;
+            else i = i - 1;
+        }
+        System.out.println(i);
     }
 }
